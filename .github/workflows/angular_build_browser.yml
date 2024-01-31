@@ -1,4 +1,4 @@
-name: Deploy to jonas-digital.be testing
+name: Deploy to jonas-digital.be
 
 on:
   push:
