@@ -13,18 +13,18 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Set up Node
+      - name: Set up Node (20.10.0)
         uses: actions/setup-node@v3
         with:
           node-version: 20.10.0
 
-      - name: Installing dependencies
+      - name: Installing dependencies (npm install)
         run: npm install
 
-      - name: Angular Build
+      - name: Angular Build (npm run build)
         run: npm run build
       
-      - name: SFTP mirror
+      - name: SFTP mirror (upload to website with sftp)
         uses: verbindingsfout/sftp-mirror@v1.6
         with:
           server: ${{ secrets.SERVER_NAME }}
