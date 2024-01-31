@@ -1,0 +1,9 @@
+.settings{
+    background-color: white;
+    padding: 10px;
+    width: 300px;
+    border-radius: 10px;
+    >*:not(:last-child){
+        margin-bottom: 10px;
+    }
+}

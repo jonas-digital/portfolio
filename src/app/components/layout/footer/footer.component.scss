@@ -1,0 +1,83 @@
+@import '../../../../sass/colors.scss';
+@import '../../../../sass/variables.scss';
+
+.footer{
+    padding: 0 10px;
+    height: 100%;
+    background-color: color(dark);
+    color: color(light);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: space-between;
+    .icon{
+        cursor: pointer;
+        font-size: 30px;
+    }
+    .openPages{
+        flex: 1;
+        border-right: 1px solid color(light);
+        border-left: 1px solid color(light);
+        padding: 0 10px;
+        display: flex;
+        gap: 3px;
+        height: 100%;
+        .openPage{
+            height: 100%;
+            width: 40px;
+            &.minimized{
+                background-color: rgba(120, 120, 255, 0.3);
+            }
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            >i {
+                font-size: 30px;
+            }
+            .name{
+                position: absolute;
+                bottom: 100%;
+                left: 0;
+                white-space: nowrap;
+                display: none;
+            }
+            &:hover{
+                .name {
+                    display: block;
+                }   
+            }
+        }
+    }
+    .end{
+        display: flex;
+        gap: 10px;
+        .notifications{
+            position: relative;
+            .amount{
+                position: absolute;
+                top: 5px;
+                right: 5px;
+                width: 10px;
+                height: 10px;
+                border-radius: 50rem;
+                background-color: lightgray;
+                color: black;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .openPages{
+        .openPage{
+            width: 25px !important;
+            >i {
+                font-size: 20px !important;
+            }
+        }
+    }
+}

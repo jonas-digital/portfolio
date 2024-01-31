@@ -1,0 +1,36 @@
+.background {
+    display: flex;
+    flex-direction: column;
+    .uploadImage{
+        display: flex;
+        flex-direction: column;
+        .buttons{
+            display: flex;
+            gap: 10px;
+            button{ 
+                margin-top: 10px;
+                flex: 1;
+                &.selected{
+                    background-color: black;
+                    color: white;
+                }
+            }
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            input {
+                margin-top: 10px;
+            }
+            .error-message {
+                color: red;
+            }
+            button{
+                margin-top: 10px;
+            }
+            .disable{
+                display: none;
+            }
+        }
+    }
+}

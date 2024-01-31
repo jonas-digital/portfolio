@@ -1,0 +1,14 @@
+<app-program [program]="program">
+        <div class="icons" content>
+            <ng-content select="[content]"></ng-content>
+        </div>
+        <div class="buttons" bottomBar>
+            <button (click)="toggleSmall()">
+                @if (isSmall) {
+                    Large
+                } @else {
+                    Small
+                }
+            </button>
+        </div>
+</app-program>
